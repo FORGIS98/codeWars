@@ -12,7 +12,7 @@ public class FunWithTreesIsPerfect{
     // So, a perfect binary tree fulfill the equation 2^(n+1)-1 = number of nodes
     public static boolean isPerfect(TreeNode node){
         if(node == null)
-            return false;
+            return true;
 
         int x = howDeep(node, 0);
         int y = howManyNodes(node, 0);
