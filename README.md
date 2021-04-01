@@ -1,3 +1,4 @@
-# codeWars
-This is a simple repo with all the Code Wars katas I've solved.
+# roadToCode
 
+CodeWars: https://www.codewars.com/
+HackerRank: https://www.hackerrank.com/
