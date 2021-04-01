@@ -1,8 +1,11 @@
 import java.util.*;
 
 public class Testing123 {
+
+
     public static List<String> number(List<String> lines) {
 
+        ArrayList<String> myList = new ArrayList<String>();
         int count = 1;
         for(String str : lines){
             myList.add(count + ": " + str);
