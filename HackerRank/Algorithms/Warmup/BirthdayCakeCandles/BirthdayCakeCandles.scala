@@ -28,8 +28,7 @@ object Result {
 
   def birthdayCakeCandles(candles: Array[Int]): Int = {
     val maxHeight: Int = candles.max
-    print(candles.filter(_ == maxHeight).length)
-    candles.filter(_ == maxHeight).length
+    return candles.filter(_ == maxHeight).length
   }
 
 }
