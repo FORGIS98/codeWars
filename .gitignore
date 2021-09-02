@@ -3,4 +3,10 @@
 *.out
 *.txt
 
+# For rust lang
+*.lock
+*.toml
+main.rs
+target/
+
 HackerRank/DataStructures/Stacks/EqualStacks
