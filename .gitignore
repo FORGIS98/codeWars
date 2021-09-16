@@ -1,5 +1,4 @@
 *.swp
-*.class
 *.out
 *.txt
 
@@ -9,4 +8,10 @@
 main.rs
 target/
 
+# For java lang
+Main.rs
+*.class
+
 HackerRank/DataStructures/Stacks/EqualStacks
+CrackingCodingInterview/Java/TreesGraphs
+
