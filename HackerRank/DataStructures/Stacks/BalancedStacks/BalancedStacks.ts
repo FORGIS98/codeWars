@@ -30,18 +30,25 @@ function readLine(): string {
  * The function accepts STRING s as parameter.
  */
 
+/*
+  Solution.ts(41,23): error TS2494: Using a string in a 'for...of' statement is only supported in ECMAScript 5 and higher.
+*/
+
 function isBalanced(s: string): string {
   let fake_stack: string[] = [];
-  let dic: {[key: string]: string} = {
+  let dic: { [key: string]: string } = {
     "}": "{",
     "]": "[",
-    ")": "("
+    ")": "(",
   };
 
-  for (let bracket of s) {
-    if("{[(".includes(bracket)) {
-      fake_stack.push(bracket);
-    } else if (fake_stack.length != 0 && fake_stack[fake_stack.length - 1].match(dic[bracket])) {
+  for (let bracketIndex: number = 0; bracketIndex < s.length; bracketIndex++) {
+    if ("{[(".includes(s[bracketIndex])) {
+      fake_stack.push(s[bracketIndex]);
+    } else if (
+      fake_stack.length != 0 &&
+      fake_stack[fake_stack.length - 1] === dic[s[bracketIndex]]
+    ) {
       fake_stack.pop();
     } else {
       return "NO";
