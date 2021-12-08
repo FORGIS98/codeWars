@@ -6,6 +6,7 @@ def star(stages, days, txt):
 
     print(txt, sum(stages))
 
+
 if __name__ == "__main__":
     with open("/home/jorge/input.txt") as file:
         data = list(map(int, file.read().split(',')))
@@ -14,5 +15,7 @@ if __name__ == "__main__":
     for d in data:
         stages[d] += 1
 
+    second_star_states = stages[:]
+
     star(stages, 80, "First Star:")
-    star(stages, 256, "Second Star:")
+    star(second_star_states, 256, "Second Star:")
