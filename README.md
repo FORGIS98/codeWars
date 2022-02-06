@@ -9,3 +9,4 @@ I like to program small exercises and challenges. And I like to save the things 
 - AceptaElReto: https://www.aceptaelreto.com/
 - GoogleFooBar: https://foobar.withgoogle.com/
 - AdventOfCode: https://adventofcode.com/
+- TelefonicaCodeChallenge0x14: https://codechallenge.0x14.net/
