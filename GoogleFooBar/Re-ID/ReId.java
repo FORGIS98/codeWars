@@ -4,43 +4,33 @@ public class ReId {
     public static void main(String[] args) {
         System.out.println("i = 0 :: " + solution(0).equals("23571"));
         System.out.println("i = 3 :: " + solution(3).equals("71113"));
+        System.out.println("i = 12 :: " + solution(12).equals("23293"));
+        System.out.println("i = 45 :: " + solution(45).equals("71011"));
     }
 
     public static String solution(int i) {
-
-        boolean isPrime[] = new boolean[i + 5];
-        Arrays.fill(prime, true);
-
-        int sizeSoFar = 0;
-        int primeNumberCount = 0;
-
-        for (int j = 2; j * j <= (i + 5); j++) {
-            if (isPrime[j]) {
-                for (int k = j * 2; k < (i + 5); k += j) {
-                    isPrime[k] = false;
-                }
-
-                primeNumberCount += 1;
-                sizeSoFar += String.valueOf(j).length();
-
-                if (sizeSoFar > (i + 5)) {
-                    break;
-                }
-            }
-        }
-
         StringBuilder primeBuilder = new StringBuilder();
+        primeBuilder.append(2);
 
-        for (int j = 2; j <= (primeNumberCount); j++) {
-            if (isPrime[i]) {
-                primeBuilder.append(String.valueOf(j));
+        for (int j = 3; primeBuilder.length() <= (i + 5); j += 2) {
+            if (isPrime(j)) {
+                primeBuilder.append(j);
             }
         }
 
         char[] id = new char[5];
-        primeBuilder.getChars(i, 5, id, 0);
+        primeBuilder.getChars(i, (i + 5), id, 0);
 
-        return id.toString();
+        return String.valueOf(id);
     }
 
+    private static boolean isPrime(int num) {
+        for (int i = 2; (i * i) <= num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
